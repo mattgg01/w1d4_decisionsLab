@@ -13,7 +13,9 @@ let firstItem = arr[0]
 /*
   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
-
+let lastItemRemoved = arr.pop()
+console.log(arr)
+console.log('Item removed: ' + lastItemRemoved)
 //Code Here
 
 ////////// PROBLEM 3 //////////
@@ -27,7 +29,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
-
+for(let i = 0; i < family.length; i++){
+  console.log(family[i])
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -42,13 +46,22 @@ let evensArr = []
 */
 
 //Code Here
-
+for (let i = 0; i < nums.length; i++){
+  if (nums[i] % 2 == 0){
+    let numSelected = nums[i]
+    evensArr.push(numSelected)
+  }
+}
+console.log("Nums array:")
+console.log(nums)
+console.log("Even numbers pushed:")
+console.log(evensArr)
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var score = 74
+var score = 70
 // Do not edit the code above.
 
 /*
@@ -57,13 +70,26 @@ var score = 74
 
 //Code Here
 
+if (score >= 90){
+  console.log('You scored a ' + score + ' Which brings your test score to an A')
+}else if (score >= 80){
+  console.log('You scored a ' + score + ' Which brings your test score to an B')
+}else if (score >= 70){
+  console.log('You scored a ' + score + ' Which brings your test score to an C')
+}
+else if (score >= 60){
+  console.log('You scored a ' + score + ' Which brings your test score to an D')
+}
+else if (score <= 59){
+  console.log('You scored a ' + score + ' Which brings your test score to an F')
+}
 
 ////////// Intermediate Problems //////////
 
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4,8,12,16,20,24,66,43,39];
 // Do not edit the code above.
 
 /*
@@ -71,7 +97,16 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
+let someNum = myFavoriteNumbers[4]
 
+console.log("Number chosen is:")
+console.log(someNum)
+
+//COME BACK HERE_________________________________________________
+//let someNum = myFavoriteNumbers[4]
+
+//console.log("Number chosen is:")
+//console.log(someNum)
 
 ////////// PROBLEM 7 //////////
 
@@ -79,6 +114,16 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
+if (myFavoriteNumbers.length < 7){
+  console.log('There are not enough elements in this array')
+}else if (myFavoriteNumbers.length > 7){
+  console.log("There are enough elements. Choosing 7th number..")
+  let someNum = myFavoriteNumbers[6]
+  console.log('7th Number chosen from array: ')
+  console.log(someNum)
+}
+
+
 
 
 ////////// PROBLEM 8 //////////
@@ -90,6 +135,15 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
+for(let i = 0; i < listOfNumbers.length; i++){
+  if([i] % 3 == 0){
+    console.log(i + ' is divisible by 3')
+  }else{
+    console.log(i + ' is not divisible by 3')
+  }
+}
+
+
 
 
 ////////// PROBLEM 9 //////////
@@ -102,6 +156,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+for(let i = letters.length - 1; i >= 0; i--){
+  console.log(letters[i])
+}
 
 
 ////////// Advanced Problems //////////
@@ -113,18 +170,20 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 let letterGrade = 'B'
 // Do not edit the code above.
 
-/* Use a switch statement on 'letterGrade' and console.log the appropriate response.
-
-If A: "The student is doing excellently."
-If B: "The student is doing well."
-If C: "The student is doing alright."
-If D: "The student is not doing very well."
-If F: "The student is failing."
-If the letter grade is not one of the above letters, console.log 'Not an eligible grade.'
-*/
-
 //Code Here
-
+// switch (letterGrade) {
+//   case A: 
+//     console.log("The student is doing excellently.")
+//   case B:
+//     console.log("The student is doing well.")
+//   case C: 
+//     console.log("The student is doing alright.")
+//   case D: 
+//     console.log("The student is not doing very well.")
+//   case F: 
+//     console.log("The student is failing.")
+//   default: ("This letter grade isn't applicable")
+// }
 
 
 ////////// PROBLEM 11 //////////
